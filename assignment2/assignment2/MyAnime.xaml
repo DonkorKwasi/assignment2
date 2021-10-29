@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="assignment2.MyAnime">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="My Fave Anime" FontSize="Header"></Label>
+
+            <StackLayout HeightRequest="200">
+                <ListView x:Name="AniList" ItemSelected="selectedOne">
+
+
+                    <ListView.ItemTemplate>
+
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout Orientation="Horizontal">
+
+                                    <Image Source="{Binding img}"></Image>
+                                    <Label Text="{Binding title}"></Label>
+                                 
+
+                                    <Label Text="{Binding place, StringFormat='      Personal Rating ({0})'}"></Label>
+                                   
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+
+            </StackLayout>
+            <StackLayout Orientation="Vertical" HorizontalOptions="Center">
+             
+                <Button Text="move selected anime up one rating " Clicked="swapUp"></Button>
+                <Button Text="move selected anime down one rating "  Clicked="swapDown"></Button>
+            </StackLayout>
+            <StackLayout HorizontalOptions="Center">
+                <Button Text="Save list" Clicked="Save"></Button>
+                <Button Text="Delete list from database" Clicked="delete"></Button>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="assignment2.seasonalSearch">
+    <ContentPage.Content>
+        <StackLayout>
+
+            <StackLayout HeightRequest="60">
+            <Label Text="Search by Season" FontSize="Title" ></Label>
+            </StackLayout>
+            <StackLayout Orientation="Vertical">
+            <Entry Placeholder="Enter Season" x:Name="Szn"></Entry>
+            <Entry Placeholder="Enter Year" x:Name="Year"></Entry>
+
+
+              
+            </StackLayout>
+            <StackLayout WidthRequest="100" HeightRequest="300">
+
+                <Label x:Name="test"></Label>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="250">
+
+                        </RowDefinition>
+                        <RowDefinition Height="50">
+
+                        </RowDefinition>
+                    </Grid.RowDefinitions>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*">
+
+                        </ColumnDefinition>
+                        <ColumnDefinition Width="*">
+
+                        </ColumnDefinition>
+
+                        <ColumnDefinition Width="*">
+
+                        </ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+
+                    <Label x:Name="title" Grid.Row="0" Grid.Column="0" FontSize="Medium"></Label>
+                    <Label x:Name="rate" Grid.Row="1" Grid.Column="0"></Label>
+                    <Image x:Name="img" Grid.Row="0" Grid.Column="1" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"></Image>
+                    <Label x:Name="syn" Grid.Row="0" Grid.Column="2" FontSize="Caption"></Label>
+
+
+
+                </Grid>
+
+            </StackLayout>
+            <Button Text="Search" Clicked="SearchingSeason"></Button>
+
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+
+                <Button Text="prev" Clicked="goPrev"></Button>
+                <Button Text="Add Anime to my favourites" Clicked="addToFave"></Button>
+                <Button Text="next" Clicked="goNext"></Button>
+                
+            </StackLayout>
+        </StackLayout>
+
+    </ContentPage.Content>
+</ContentPage>
