@@ -111,6 +111,7 @@ namespace assignment2
                 else
                 {
                     list.Add(fav);
+                    App.Database.SaveAnimeAsync(fav);
                     DisplayAlert("New fave found!", "This anime has successfully been added to your favourites", "ok");
                 }
 
@@ -129,6 +130,7 @@ namespace assignment2
 
         }
 
+       
     }
    }
  

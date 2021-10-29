@@ -30,6 +30,7 @@ namespace assignment2
         public MainPage(List<AnimeDisplay> fave)
         {
             InitializeComponent();
+            faves = fave;
         }
         
 
@@ -125,6 +126,7 @@ namespace assignment2
                 else
                 {
                     faves.Add(fav);
+                    App.Database.SaveAnimeAsync(fav);
                     DisplayAlert("New fave found!", "This anime has successfully been added to your favourites", "ok");
                 }
                 

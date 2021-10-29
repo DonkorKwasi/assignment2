@@ -35,7 +35,7 @@
                 <Button Text="move selected anime down one rating "  Clicked="swapDown"></Button>
             </StackLayout>
             <StackLayout HorizontalOptions="Center">
-                <Button Text="Save list" Clicked="Save"></Button>
+                
                 <Button Text="Delete list from database" Clicked="delete"></Button>
             </StackLayout>
         </StackLayout>

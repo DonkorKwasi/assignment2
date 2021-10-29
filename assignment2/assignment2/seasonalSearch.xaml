@@ -58,8 +58,10 @@
                 <Button Text="prev" Clicked="goPrev"></Button>
                 <Button Text="Add Anime to my favourites" Clicked="addToFave"></Button>
                 <Button Text="next" Clicked="goNext"></Button>
-                
+          
+
             </StackLayout>
+ 
         </StackLayout>
 
     </ContentPage.Content>

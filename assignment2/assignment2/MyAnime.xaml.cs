@@ -94,16 +94,7 @@ namespace assignment2
            
         }
 
-        private void Save(object sender, EventArgs e)
-        {
-            if(all.Count > 0)
-            {
-                for(int i = 0; i < all.Count; i++ )
-                {
-                    App.Database.SaveAnimeAsync(all[i]);
-                }
-            }
-        }
+      
 
         private void delete(object sender, EventArgs e)
         {
